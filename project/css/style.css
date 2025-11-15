@@ -1,12 +1,14 @@
+/* Основні налаштування */
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
+  background-color: #f8f8f8; /* Світло-сірий фон */
   color: #333;
   line-height: 1.6;
 }
 
+/* Загальні елементи */
 main {
   padding: 20px;
   max-width: 1200px;
@@ -16,11 +18,12 @@ main {
 h1,
 h2,
 h3 {
-  color: #a0522d;
+  color: #a0522d; /* Теплий коричневий (колір кориці) */
 }
 
+/* Навігація */
 header {
-  background-color: #a0522d;
+  background-color: #a0522d; /* Темний заголовок */
   color: white;
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -43,12 +46,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #d2b48c;
+  background-color: #d2b48c; /* Світліший коричневий при наведенні */
   color: #333;
 }
 
+/* Секція Hero (Головна сторінка) */
 .hero {
-  background-color: #fff0f5;
+  background-color: #fff0f5; /* Ніжно-рожевий фон */
   padding: 60px 20px;
   text-align: center;
   margin-bottom: 20px;
@@ -57,13 +61,13 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-  color: #38761d;
+  color: #38761d; /* Зелений для акценту */
   margin-top: 0;
 }
 
 .call-to-action .button {
   display: inline-block;
-  background-color: #ff6347;
+  background-color: #ff6347; /* Яскравий червоний */
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -75,6 +79,8 @@ nav ul li a:hover {
 .call-to-action .button:hover {
   background-color: #e55333;
 }
+
+/* Секція Features */
 .features {
   display: flex;
   justify-content: space-around;
@@ -90,10 +96,117 @@ nav ul li a:hover {
   flex: 1;
 }
 
+/* Стилі для галереї (з gallery.html) */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0; /* Прибираємо зайвий внутрішній відступ */
+}
+
+.gallery-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: white;
+}
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Стилі для форми контактів (з contacts.html) */
+.contact-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+.contact-form label,
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Важливо для адаптивності! */
+}
+.contact-form button.button {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Футер */
 footer {
   background-color: #333;
   color: white;
   text-align: center;
   padding: 15px 0;
   margin-top: 20px;
+}
+
+/* ========================================================== */
+/* АДАПТИВНИЙ ДИЗАЙН (MEDIA QUERIES)                */
+/* ========================================================== */
+
+@media (max-width: 768px) {
+  /* Навігація: на планшетах і менших пристроях */
+  nav ul {
+    flex-direction: column; /* Елементи навігації розташовуються вертикально */
+    text-align: center;
+  }
+
+  nav ul li a {
+    padding: 10px 0; /* Збільшуємо зону натискання */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Легкий роздільник */
+  }
+
+  /* Hero секція */
+  .hero {
+    padding: 40px 10px;
+  }
+  .hero h1 {
+    font-size: 1.8em; /* Зменшуємо розмір заголовка */
+  }
+
+  /* Секція Features: робимо вертикальною */
+  .features {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .feature-item {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  /* Загальне зменшення відступів на дуже малих екранах */
+  main {
+    padding: 10px;
+  }
+
+  /* Галерея: робимо сітку з одного стовпця */
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Один елемент на рядок */
+    gap: 15px;
+  }
+
+  /* Футер */
+  footer {
+    font-size: 0.9em;
+    padding: 10px 5px;
+  }
 }

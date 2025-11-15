@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📸 Галерея Няшності - Собаки - це Няшно</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+      }
+      .gallery-item {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+      }
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="about.html">Чому вони няшні?</a></li>
+          <li><a href="services.html">Послуги</a></li>
+          <li><a href="gallery.html">Галерея Няшності</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Наш Каталог Чарівності!</h1>
+        <p>
+          Погляньте на ці неймовірно милі мордочки. Це лише мала частина того,
+          наскільки собаки можуть бути няшними!
+        </p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="images/dog1.jpg" alt="Няшний песик 1" />
+            <p>Маленький дослідник</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/dog2.jpg" alt="Няшний песик 2" />
+            <p>Майстер сну</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/dog3.jpg" alt="Няшний песик 3" />
+            <p>Щасливий хвіст</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Світ Собачої Няшності. Всі права захищені (і виляють).</p>
+    </footer>
+  </body>
+</html>
